@@ -3,20 +3,25 @@
         <link rel="stylesheet" href="layout.css">
   </head>
   <body>
+    <text>
+      Races
+    </text>
     <header>
       Characters            Weapons              Spells
     </header>
-    <left-box>
-      <button id = "dwarf" type = "button" onclick = "race_click()">
-      Dwarf
+    <race-box>
+      <button id = "elf" class = "race" type = "button" onclick = "race_click('elf')" value = "0">
+      Elf (High)
       </button>
-    </left-box>
-    <right-box id ="info" style = "display:none">
-      Dwarf can use axe or longbow.
-      Dwarf has 10 health.
-    </right-box>
-    <text>
-    </text>
+      <button id = "dwarf" class = "race" type = "button" onclick = "race_click('dwarf')" value = "0">
+      Dwarf (Hill)
+      </button>
+      <button id = "human" class = "race" type = "button" onclick = "race_click('human')" value = "0">
+      Human
+      </button>
+    </race-box>
+    <race-info id ="info" style = "display:none">
+    </race-info>
     <script type="text/javascript" src="js/races.js"></script>
   </body>
 </html>
