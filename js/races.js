@@ -3,7 +3,7 @@ let dwarf = "";
 let data = "";
 let human = "";
 
-fetch('https://330-team.github.io/Tabletop-Project/elf-high.json')
+fetch('races/elf-high.json')
   .then((response) => {
     return response.json();
   })
@@ -11,7 +11,7 @@ fetch('https://330-team.github.io/Tabletop-Project/elf-high.json')
     elf = myJson;
   });
 
-fetch('https://330-team.github.io/Tabletop-Project/dwarf.json')
+fetch('races/dwarf.json')
     .then((response) => {
       return response.json();
     })
@@ -19,7 +19,7 @@ fetch('https://330-team.github.io/Tabletop-Project/dwarf.json')
       dwarf = myJson;
     });
 
-  fetch('https://330-team.github.io/Tabletop-Project/human.json')
+  fetch('races/human.json')
         .then((response) => {
           return response.json();
         })
