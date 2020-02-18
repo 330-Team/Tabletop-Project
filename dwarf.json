@@ -2,10 +2,10 @@
     "race": "Dwarf (Hill)",
     "stats": {
         "ability_scores": [
-            "Con +2"
+            "Con +2",
             "Wis +1"
         ],
-        "size": "Medium"
+        "size": "Medium",
         "speed": "25 ft."
     },
     "attributes": {
@@ -18,7 +18,7 @@
             "description": "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."
         },
         "dwarven-resilience": {
-            "name": "Dwarven Resilience"
+            "name": "Dwarven Resilience",
             "description": "You have advantage on saving throws against poison and you have resistance against poison damage."
         },
         "stonecunning": {
