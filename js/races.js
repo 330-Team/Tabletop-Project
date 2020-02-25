@@ -2,6 +2,7 @@ let elf = "";
 let dwarf = "";
 let data = "";
 let human = "";
+let current_data = "";
 
 fetch('races/elf-high.json')
   .then((response) => {
@@ -45,6 +46,7 @@ const race_click = (race) =>{
   let race_box = document.getElementById(race);
   let race_info = document.getElementById("info");
   if(race_box.value == "0"){
+    button = document.getElementById("add");
     race_info.innerHTML = "";
     race_box.value = "1";
     race_info.style = "display:normal";
@@ -57,5 +59,18 @@ const race_click = (race) =>{
       Object.keys(data.attributes[key]).forEach(function (key2) {
         race_info.innerHTML += data.attributes[key][key2] + "<br />";
       });});
-    }
+
+    race_info.appendChild(button);
+  }
+
+  current_data = race_info.innerHTML;
+}
+
+const add_to_pad = () =>{
+  localStorage.setItem("race", current_data);
+  console.log(localStorage.getItem("race"));
+}
+
+const notepad = () =>{
+  window.location.href = "http://0.0.0.0:8000/notepad.html";
 }
