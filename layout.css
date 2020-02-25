@@ -2,9 +2,20 @@
     background-color: grey;
 }
 
-header, text, race-box, race-info{
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+text{
+  font-weight: bold;
+}
+
+text, race-box, race-info{
   display: flex;
   flex-direction: column;
+
 }
 
 body {
