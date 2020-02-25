@@ -1,11 +1,25 @@
 <html>
   <head>
-      <link rel="stylesheet" href="layout.css">
+      <link rel="stylesheet" href="notepad-layout.css">
+      <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open-Sans">
+<style>
+  text,header {
+    font-family: 'Open Sans', serif;
+    font-size: 48px;
+  }
+</style>
   </head>
   <body>
+    <text>
+      Notepad <button onclick = "refresh()"></button>
+    </text>
+    <header>
+        <a href="http://0.0.0.0:8000/races.html">Races</a><a href="http://0.0.0.0:8000/classes.html">Classes</a> <a href="http://0.0.0.0:8000/weapons.html">Weapons</a> <a href="http://0.0.0.0:8000/spells.html">Spells</a>
+    </header>
+
     <div class="flex-container">
       <div id = "race"></div>
-      <div id = "class"></div>
     </div>
   </body>
 <script type="text/javascript" src="js/notepad.js"></script>
