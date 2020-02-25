@@ -64,5 +64,5 @@ const add_to_pad = () =>{
 }
 
 const notepad = () =>{
-  window.location.href = "http://0.0.0.0:8000/notepad.html";
+  window.location.href = "http://localhost:8000/notepad.html";
 }
