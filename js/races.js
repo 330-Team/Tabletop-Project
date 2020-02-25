@@ -1,3 +1,4 @@
+let current_data = ""
 let races = []
 
 fetch('races/manifest.json')
@@ -33,6 +34,7 @@ const race_click = (ev_id) =>{
   const race_box = document.getElementById(ev_id);
   const race_info = document.getElementById("info");
   if(race_box.value == "0"){
+    button = document.getElementById("add");
     race_info.innerHTML = "";
     race_box.value = "1";
     race_info.style = "display:normal";
@@ -50,6 +52,19 @@ const race_click = (ev_id) =>{
         <p>${data.attributes[attribute].description}</p>
       </div>
       `
-      });
-    }
+    });
+    
+    race_info.appendChild(button);
+  }
+
+  current_data = race_info.innerHTML;
+}
+
+const add_to_pad = () =>{
+  localStorage.setItem("race", current_data);
+  console.log(localStorage.getItem("race"));
+}
+
+const notepad = () =>{
+  window.location.href = "http://0.0.0.0:8000/notepad.html";
 }
