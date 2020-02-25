@@ -1,3 +1,7 @@
+*{
+    background-color: grey;
+}
+
 header, text, race-box, race-info{
   display: flex;
   flex-direction: column;

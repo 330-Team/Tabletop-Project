@@ -53,16 +53,14 @@ const race_click = (ev_id) =>{
       </div>
       `
     });
-    
+    current_data = race_info.innerHTML;
     race_info.appendChild(button);
   }
-
-  current_data = race_info.innerHTML;
 }
 
 const add_to_pad = () =>{
   localStorage.setItem("race", current_data);
-  console.log(localStorage.getItem("race"));
+  alert("Added to notepad");
 }
 
 const notepad = () =>{
