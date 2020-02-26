@@ -59,6 +59,11 @@ const race_click = (ev_id) =>{
 }
 
 const add_to_pad = () =>{
+  localStorage.setItem("track-race", "1");
+  if(localStorage.getItem("done") != "1" && localStorage.getItem("track-class") == "1" && localStorage.getItem("track-weapon") == "1" && localStorage.getItem("track-spell") == "1"){
+    alert("Character creation achievement earned! \n You have created your very first character. See your notepad for more details.");
+    localStorage.setItem("done", "1");
+  }
   localStorage.setItem("race", current_data);
   alert("Added to notepad");
 }
