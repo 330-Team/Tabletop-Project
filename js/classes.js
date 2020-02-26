@@ -8,6 +8,7 @@ fetch('classes/manifest.json')
       fetch(`classes/${file}.json`)
       .then(response => response.json())
       .then(class_data => {
+        console.log("HI");
         document.querySelector("class-box").innerHTML += `
         <button id = "${class_data.class}" class = "classes" type = "button" onclick = "class_click('${class_data.class}')" value = "0">
         ${class_data.class}
@@ -20,14 +21,14 @@ fetch('classes/manifest.json')
   })
 
 const class_click = (ev_id) =>{
-  let class_elements = document.getElementsByClassName("class");
+  let class_elements = document.getElementsByClassName("classes");
   for(i = 0; i<class_elements.length; i++){
     class_elements[i].value = "0";
   }
 
-  for (class of classs) {
-    if (class.class == ev_id) {
-      data = class
+  for (c of classes) {
+    if (c.class == ev_id) {
+      data = c
     }
   }
 
@@ -39,17 +40,17 @@ const class_click = (ev_id) =>{
     class_box.value = "1";
     class_info.style = "display:normal";
 
-    Object.keys(data.stats).forEach(function (key) {
+    Object.keys(data.proficiencies).forEach(function (key) {
       class_info.innerHTML += `
-      <p>${data.stats[key]}</p>
+      <p>${data.proficiencies[key]}</p>
       `;
     });
 
-    Object.keys(data.attributes).forEach(function (attribute) {
+    Object.keys(data.features).forEach(function (feature) {
       class_info.innerHTML += `
-      <div class = "attribute">
-        <b>${data.attributes[attribute].name}</b>
-        <p>${data.attributes[attribute].description}</p>
+      <div class = "feature">
+        <b>${data.features[feature].name}</b>
+        <p>${data.features[feature].description}</p>
       </div>
       `
     });
