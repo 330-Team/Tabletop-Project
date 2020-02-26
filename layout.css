@@ -12,7 +12,7 @@ text{
   font-weight: bold;
 }
 
-text, race-box, race-info{
+text, race-box, race-info, class-box, class-info{
   display: flex;
   flex-direction: column;
 
@@ -56,5 +56,17 @@ race-info{
 }
 
 race-box{
+  padding-right: 20px;
+}
+
+class-info #info{
+  line-height: 1;
+}
+
+class-info{
+  padding-right: 20px;
+}
+
+class-box{
   padding-right: 20px;
 }
