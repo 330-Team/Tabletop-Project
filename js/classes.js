@@ -40,11 +40,43 @@ const class_click = (ev_id) =>{
     class_box.value = "1";
     class_info.style = "display:normal";
 
+    class_info.innerHTML += `
+    <p>${"HP:  " + data.hp}</p>
+    `;
+
     Object.keys(data.proficiencies).forEach(function (key) {
       class_info.innerHTML += `
-      <p>${data.proficiencies[key]}</p>
+      <p>${key.charAt(0).toUpperCase() + key.slice(1) + ":  " + data.proficiencies[key]}</p>
       `;
     });
+
+    class_info.innerHTML +=  'Equip options:  ';
+
+    for(i in data['equip-options']){
+      if(i == data['equip-options'].length-1){
+        class_info.innerHTML +=  data['equip-options'][i];
+      }
+      else{
+        class_info.innerHTML +=  data['equip-options'][i] + ", ";
+      }
+    }
+
+    class_info.innerHTML += `
+    <p>${"Spells".bold().fontsize(5)}</p>
+    `;
+
+    Object.keys(data.spells).forEach(function (s) {
+      class_info.innerHTML += `
+      <div class = "feature">
+        <b>${s}</b>
+        <p>${data.spells[s]}</p>
+      </div>
+      `
+    });
+
+    class_info.innerHTML += `
+    <p>${"Features".bold().fontsize(5)}</p>
+    `;
 
     Object.keys(data.features).forEach(function (feature) {
       class_info.innerHTML += `

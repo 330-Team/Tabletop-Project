@@ -2,24 +2,24 @@
     "class": "Rogue",
     "hp": "10",
     "proficiencies": {
-        "armor": [
+        "Armor": [
             "light armor"
         ],
-        "weapons": [
+        "Weapons": [
             "simple weapons",
             "hand crossbows",
             "longswords",
             "rapiers",
             "shortswords"
         ],
-        "tools": [
+        "Tools": [
             "thieve's tools"
         ],
-        "saving-throws": [
+        "Saving-throws": [
             "Dexterity",
             "Intelligence"
         ],
-        "skills": [
+        "Skills": [
             "Acrobatics",
             "Deception",
             "Perception",
@@ -40,7 +40,7 @@
         },
         "sneak-attack": {
             "name": "Sneak Attack",
-            "description": "You know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if an ally is within 5 feet of the target.\\n\\nThe attack must use a ranged weapon.",
+            "description": "You know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if an ally is within 5 feet of the target.The attack must use a ranged weapon.",
             "options": {}
         },
         "thieves-cant": {

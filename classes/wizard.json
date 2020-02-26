@@ -2,20 +2,20 @@
     "class": "Wizard",
     "hp": "8",
     "proficiencies": {
-        "armor": [],
-        "weapons": [
+        "Armor": [],
+        "Weapons": [
             "daggers",
             "darts",
             "slings",
             "quarterstaffs",
             "light crossbows"
         ],
-        "tools": [],
-        "saving-throws": [
+        "Tools": [],
+        "Saving-throws": [
             "Intelligence",
             "Wisdom"
         ],
-        "skills": [
+        "Skills": [
             "Arcana",
             "Insight"
         ]
