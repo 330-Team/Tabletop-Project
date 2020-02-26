@@ -12,7 +12,7 @@ text{
   font-weight: bold;
 }
 
-text, race-box, race-info, class-box, class-info, weapon-box, weapon-info{
+text, race-box, race-info, class-box, class-info, weapon-box, weapon-info, spell-box, spell-info{
   display: flex;
   flex-direction: column;
 
@@ -80,5 +80,17 @@ weapon-info{
 }
 
 weapon-box{
+  padding-right: 20px;
+}
+
+spell-info #info{
+  line-height: 1;
+}
+
+spell-info{
+  padding-right: 20px;
+}
+
+spell-box{
   padding-right: 20px;
 }

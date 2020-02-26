@@ -1,11 +1,11 @@
 let current_data = ""
-let weapons = []
+let spells = []
 
-fetch('weapons/manifest.json')
+fetch('spells/manifest.json')
   .then((response) => response.json())
   .then(manifest => {
     for(file of manifest.files) {
-      fetch(`weapons/${file}.json`)
+      fetch(`spells/${file}.json`)
       .then(response => response.json())
       .then(spell_data => {
         document.querySelector("spell-box").innerHTML += `
@@ -14,7 +14,7 @@ fetch('weapons/manifest.json')
         </button>
         `
 
-        weapons.push(spell_data)
+        spells.push(spell_data)
       })
     }
   })
@@ -25,7 +25,7 @@ const spell_click = (ev_id) =>{
     spell_elements[i].value = "0";
   }
 
-  for (spell of weapons) {
+  for (spell of spells) {
     if (spell.spell == ev_id) {
       data = spell
     }
@@ -39,20 +39,23 @@ const spell_click = (ev_id) =>{
     spell_box.value = "1";
     spell_info.style = "display:normal";
 
-    Object.keys(data.stats).forEach(function (key) {
-      spell_info.innerHTML += `
-      <p>${data.stats[key]}</p>
-      `;
-    });
+    spell_info.innerHTML += `
+    <p>${"Level: " + data.level}</p>
+    `;
 
-    Object.keys(data.attributes).forEach(function (attribute) {
+    Object.keys(data.properties).forEach(function (p) {
       spell_info.innerHTML += `
-      <div class = "attribute">
-        <b>${data.attributes[attribute].name}</b>
-        <p>${data.attributes[attribute].description}</p>
+      <div class = "property">
+        <b>${data.properties[p].name}</b>
+        <p>${data.properties[p].value}</p>
       </div>
       `
     });
+
+    spell_info.innerHTML += `
+    <p>${"Description: " + data.description}</p>
+    `;
+
     current_data = spell_info.innerHTML;
     spell_info.appendChild(button);
   }
