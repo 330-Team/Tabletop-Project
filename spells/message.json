@@ -1,0 +1,23 @@
+{
+    "spell": "Message",
+    "level": "0",
+    "properties": [
+        {
+            "name": "Casting Time",
+            "value": "1 action"
+        },
+        {
+            "name": "Range",
+            "value": "120 feet"
+        },
+        {
+            "name": "Components",
+            "value": "Verbal, Somatic, Material"
+        },
+        {
+            "name": "Duration",
+            "value": "1 round"
+        }
+    ],
+    "description": "You point your finger toward a creature within range and whisper a message. The target (and only the target) hears the message and can reply in a whisper that only you can hear."
+}
