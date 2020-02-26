@@ -1,0 +1,42 @@
+{
+    "class": "Wizard",
+    "hp": "8",
+    "proficiencies": {
+        "Armor": [],
+        "Weapons": [
+            "daggers",
+            "darts",
+            "slings",
+            "quarterstaffs",
+            "light crossbows"
+        ],
+        "Tools": [],
+        "Saving-throws": [
+            "Intelligence",
+            "Wisdom"
+        ],
+        "Skills": [
+            "Arcana",
+            "Insight"
+        ]
+    },
+    "equip-options": [
+        "Quarterstaff"
+    ],
+    "spells": {
+        "cantrip": "3",
+        "1st-level": "2"
+    },
+    "features": {
+        "cantrips": {
+            "name": "cantrips",
+            "description": "You know three cantrips of your choice from the spell list.",
+            "options": {}
+        },
+        "spellbook": {
+            "name": "Spellbook",
+            "description": "You have a spellbook containing two 1st-level spells of your choice.",
+            "optoins": {}
+        }
+    }
+}

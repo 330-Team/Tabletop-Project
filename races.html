@@ -1,0 +1,28 @@
+<html>
+  <head>
+        <link rel="stylesheet" href="layout.css">
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open-Sans">
+  <style>
+    text, header {
+      font-family: 'Open Sans', serif;
+      font-size: 48px;
+    }
+  </style>
+  </head>
+  <body>
+    <text>
+      Races
+    </text>
+    <header>
+      <a href="classes.html">Classes</a> <a href="weapons.html">Weapons</a> <a href="spells.html">Spells</a> <a href="notepad.html">Notepad</a>
+    </header>
+    <race-box></race-box>
+    <race-info id ="info" style = "display:none">
+      <button id = "add" onclick = "add_to_pad()" value="0">
+        Add to Notepad
+      </button>
+    </race-info>
+    <script type="text/javascript" src="js/races.js"></script>
+  </body>
+</html>
