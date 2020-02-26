@@ -2,22 +2,22 @@
     "class": "Fighter",
     "hp": "13",
     "proficiencies": {
-        "armor": [
+        "Armor": [
             "light armor",
             "medium armor",
             "heavy armor",
             "shields"
         ],
-        "weapons": [
+        "Weapons": [
             "simple weapons",
             "martial weapons"
         ],
-        "tools": [],
-        "saving-throws": [
+        "Tools": [],
+        "Saving-throws": [
             "Strength",
             "Constitution"
         ],
-        "skills": [
+        "Skills": [
             "Athletics",
             "Intimidation"
         ]
@@ -45,7 +45,7 @@
         },
         "second-wind": {
             "name": "Second Wind",
-            "description": "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level.\\n\\nOnce you use this feature, you must finish a short or long rest before you can use it again.",
+            "description": "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again.",
             "options": {}
         }
     }
