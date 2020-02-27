@@ -9,7 +9,7 @@ fetch('races/manifest.json')
       .then(response => response.json())
       .then(race_data => {
         document.querySelector("race-box").innerHTML += `
-        <button id = "${race_data.race}" class = "race" type = "button" onclick = "race_click('${race_data.race}')" value = "0">
+        <button id = "${race_data.race}" class = "race btn-large amber lighten-2 waves-effect" type = "button" onclick = "race_click('${race_data.race}')" value = "0">
         ${race_data.race}
         </button>
         `
