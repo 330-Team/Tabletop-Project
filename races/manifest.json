@@ -3,6 +3,10 @@
     [
         "elf-high",
         "dwarf",
-        "human"
+        "human",
+        "dragonborn",
+        "tiefling",
+        "half-elf",
+        "forest-gnome"
     ]
 }

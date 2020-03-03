@@ -3,6 +3,10 @@
     [
         "fighter",
         "rogue",
-        "wizard"
+        "wizard",
+        "monk",
+        "paladin",
+        "ranger",
+        "sorcerer"
     ]
 }
