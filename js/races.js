@@ -45,7 +45,10 @@ const race_click = (ev_id) =>{
     let race_card = ``
     race_card += `
     <div class="card grey lighten-5">
-    <div class="card-content">
+    <div class="card-image">
+      <img src=${data.image_url} style="max-height:200px; width:auto;" class="right">
+    </div>
+    <div class="card-content" style="min-height:200px;">
     <span class="card-title">${data.race}</span>`
 
     Object.keys(data.stats).forEach(function (key) {
