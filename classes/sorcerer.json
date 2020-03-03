@@ -26,7 +26,10 @@
       "heavy crossbow",
       "quarterstaff"
     ],
-    "spells": {"Catapult", "Burning Hands", "Blink"},
+    "spells": {
+        "cantrip": "2",
+        "1st-level": "2"
+    },
     "features": {
         "spellcasting": {
             "name": "Spellcasting",
@@ -44,9 +47,7 @@
         },
         "sorcerous-origin": {
             "name": "Sorcerous Origin",
-            "description": "Choose a sorcerous origin, which describes the source of your innate magical power, from the list of available origins
-
-Your choice grants you features when you choose it at 1st level and again at 6th, 14th, and 18th level.",
+            "description": "Choose a sorcerous origin, which describes the source of your innate magical power, from the list of available origins. Your choice grants you features when you choose it at 1st level and again at 6th, 14th, and 18th level.",
             "options": {}
         }
     }

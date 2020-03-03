@@ -8,11 +8,13 @@ fetch('classes/manifest.json')
       fetch(`classes/${file}.json`)
       .then(response => response.json())
       .then(class_data => {
-        console.log("HI");
         document.querySelector("class-box").innerHTML += `
-        <button id = "${class_data.class}" class = "classes" type = "button" onclick = "class_click('${class_data.class}')" value = "0">
+        <div class="row">
+        <div class="col l1"></div>
+        <button id = "${class_data.class}" class = "class btn-large light-blue accent-4 waves-effect col l10 center" type = "button" onclick = "class_click('${class_data.class}')" value = "0">
         ${class_data.class}
         </button>
+        </div>
         `
 
         classes.push(class_data)
@@ -20,8 +22,12 @@ fetch('classes/manifest.json')
     }
   })
 
+window.onload = function() {
+  document.getElementById("username").innerHTML += localStorage.getItem("curr");
+}
+
 const class_click = (ev_id) =>{
-  let class_elements = document.getElementsByClassName("classes");
+  let class_elements = document.getElementsByClassName("class");
   for(i = 0; i<class_elements.length; i++){
     class_elements[i].value = "0";
   }
@@ -40,68 +46,49 @@ const class_click = (ev_id) =>{
     class_box.value = "1";
     class_info.style = "display:normal";
 
-    class_info.innerHTML += `
-    <p>${"HP:  " + data.hp}</p>
-    `;
+    let class_card = ``
+    class_card += `
+    <div class="card grey lighten-5">
+    <div class="card-content">
+    <span class="card-title">${data.class}</span>`
 
-    Object.keys(data.proficiencies).forEach(function (key) {
-      class_info.innerHTML += `
-      <p>${key.charAt(0).toUpperCase() + key.slice(1) + ":  " + data.proficiencies[key]}</p>
-      `;
+    Object.keys(data.stats).forEach(function (key) {
+      class_card += `
+      <p>${data.stats[key]} </p>`;
     });
 
-    class_info.innerHTML +=  'Equip options:  ';
-
-    for(i in data['equip-options']){
-      if(i == data['equip-options'].length-1){
-        class_info.innerHTML +=  data['equip-options'][i];
-      }
-      else{
-        class_info.innerHTML +=  data['equip-options'][i] + ", ";
-      }
-    }
-
-    class_info.innerHTML += `
-    <p>${"Spells".bold().fontsize(5)}</p>
-    `;
-
-    Object.keys(data.spells).forEach(function (s) {
-      class_info.innerHTML += `
-      <div class = "feature">
-        <b>${s}</b>
-        <p>${data.spells[s]}</p>
-      </div>
-      `
+    Object.keys(data.attributes).forEach(function (attribute) {
+      class_card += `
+      <div class = "attribute">
+        <b>${data.attributes[attribute].name}</b>
+        <p>${data.attributes[attribute].description}</p>
+      </div>`
     });
 
-    class_info.innerHTML += `
-    <p>${"Features".bold().fontsize(5)}</p>
-    `;
+    class_card += `
+    </div>`
 
-    Object.keys(data.features).forEach(function (feature) {
-      class_info.innerHTML += `
-      <div class = "feature">
-        <b>${data.features[feature].name}</b>
-        <p>${data.features[feature].description}</p>
-      </div>
-      `
-    });
-    current_data = class_info.innerHTML;
-    class_info.appendChild(button);
+    class_info.innerHTML += class_card
+    current_data = class_card;
+    class_card += `
+    <div class="card-action">
+    <a href="#" onclick = "add_to_pad()" class = "light-blue-text accent-1">Add to Notepad</a>`
+    class_info.innerHTML = class_card
   }
 }
 
 const add_to_pad = () =>{
   let user = localStorage.getItem("curr");
-  localStorage.setItem(user + "class", current_data);
+
   localStorage.setItem("track-class", "1");
-  if(localStorage.getItem("done") != "1" && localStorage.getItem("track-race") == "1" && localStorage.getItem("track-weapon") == "1" && localStorage.getItem("track-spell") == "1"){
+  if(localStorage.getItem("done") != "1" && localStorage.getItem("track-class") == "1" && localStorage.getItem("track-weapon") == "1" && localStorage.getItem("track-spell") == "1"){
     alert("Character creation achievement earned! \n You have created your very first character. See your notepad for more details.");
     localStorage.setItem("done", "1");
   }
+  localStorage.setItem(user + "class", current_data);
   alert("Added to notepad");
 }
 
 const notepad = () =>{
-  window.location.href = "http://0.0.0.0:8000/notepad.html";
+  window.location.href = "http://localhost:8000/notepad.html";
 }

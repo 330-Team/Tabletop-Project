@@ -1,44 +1,48 @@
 <html>
   <head>
-    <!-- <link rel="stylesheet" href="layout.css">
-    <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Open-Sans"> -->
+        <!-- <link rel="stylesheet" href="layout.css">
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open-Sans"> -->
 
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
-  <body>
-    <div class = "row red darken-4 z-depth-1">
-      <div class = "col l4">
-        <h2>Classes</h2>
+  <body class="grey darken-3">
+    <div class = "row cyan darken-4 z-depth-1 valign-wrapper">
+      <div class = "col l4 valign">
+        <h3>Classes</h3>
       </div>
-      <div class = "col l1 right">
-        <h5><a href="races.html" class="blue-grey-text darken-2">Races</a></h5>
-      </div>
-      <div class = "col l1 right">
-        <h5><a href="weapons.html" class="blue-grey-text darken-2">Weapons</a></h5>
-      </div>
-      <div class = "col l1 right">
-        <h5><a href="spells.html" class="blue-grey-text darken-2">Spells</a></h5>
-      </div>
-      <div class = "col l1 right">
-        <h5><a href="notepad.html" class="blue-grey-text darken-2">Notepad</a></h5>
+      <div class="col l3"></div>
+      <h5 class="col l4 valign">
+        <a href="races.html" class="light-blue-text accent-1">Races</a>
+        <a href="classes.html" class="light-blue-text accent-1">Classes</a>
+        <a href="weapons.html" class="light-blue-text accent-1">Weapons</a>
+        <a href="spells.html" class="light-blue-text accent-1">Spells</a>
+        <a href="notepad.html" class="light-blue-text accent-1">Notepad</a>
+      </h5>
+      <div class=" chip col l1">
+        <div id = "username">
+        <i class="close material-icons" onclick = "signOut()">close</i>
+        </div>
       </div>
     </div>
     <div class = "row">
-      <race-box class = "col l6"></race-box c>
-      <race-info class = "col l6" id ="info" style = "display:none">
+      <class-box class = "col l6"></class-box c>
+      <class-info class = "col l6" id ="info" style = "display:none">
         <button id = "add" onclick = "add_to_pad()" value="0">
           Add to Notepad
         </button>
-      </race-info>
+      </class-info>
     </div>
     <script type="text/javascript" src="js/classes.js"></script>
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/profile.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
   </body>
 </html>
