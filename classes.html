@@ -1,28 +1,44 @@
 <html>
   <head>
-        <link rel="stylesheet" href="layout.css">
-        <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Open-Sans">
-  <style>
-    text,header {
-      font-family: 'Open Sans', serif;
-      font-size: 48px;
-    }
-  </style>
+    <!-- <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Open-Sans"> -->
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body>
-    <text>
-      Classes
-    </text>
-    <header>
-      <a href="races.html">Races</a> <a href="weapons.html">Weapons</a> <a href="spells.html">Spells</a> <a href="notepad.html">Notepad</a>
-    </header>
-    <class-box></class-box>
-    <class-info id ="info" style = "display:none">
-      <button id = "add" onclick = "add_to_pad()">
-        Add to Notepad
-      </button>
-    </class-info>
+    <div class = "row red darken-4 z-depth-1">
+      <div class = "col s1 l4">
+        <h3>Classes</h3>
+      </div>
+      <div class = "col s1 l2">
+        <a href="classes.html">Races</a>
+      </div>
+      <div class = "col s1 l2">
+        <a href="weapons.html">Weapons</a>
+      </div>
+      <div class = "col s1 l2">
+        <a href="spells.html">Spells</a>
+      </div>
+      <div class = "col s1 l2">
+        <a href="notepad.html">Notepad</a>
+      </div>
+    </div>
+    <div class = "row">
+      <race-box></race-box>
+      <race-info id ="info" style = "display:none">
+        <button id = "add" onclick = "add_to_pad()" value="0">
+          Add to Notepad
+        </button>
+      </race-info>
+    </div>
     <script type="text/javascript" src="js/classes.js"></script>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
   </body>
 </html>
