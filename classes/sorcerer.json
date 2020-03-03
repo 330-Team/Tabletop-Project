@@ -50,5 +50,6 @@
             "description": "Choose a sorcerous origin, which describes the source of your innate magical power, from the list of available origins. Your choice grants you features when you choose it at 1st level and again at 6th, 14th, and 18th level.",
             "options": {}
         }
-    }
+    },
+    "image_url": "https://www.d20pfsrd.com/wp-content/uploads/sites/12/2017/03/sorceress_by_yamaorce-db2aktf.jpg"
 }
