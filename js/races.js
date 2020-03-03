@@ -9,9 +9,12 @@ fetch('races/manifest.json')
       .then(response => response.json())
       .then(race_data => {
         document.querySelector("race-box").innerHTML += `
-        <button id = "${race_data.race}" class = "race btn-large amber lighten-2 waves-effect" type = "button" onclick = "race_click('${race_data.race}')" value = "0">
+        <div class="row">
+        <div class="col l1"></div>
+        <button id = "${race_data.race}" class = "race btn-large light-blue accent-4 waves-effect col l10 center" type = "button" onclick = "race_click('${race_data.race}')" value = "0">
         ${race_data.race}
         </button>
+        </div>
         `
 
         races.push(race_data)
@@ -39,22 +42,34 @@ const race_click = (ev_id) =>{
     race_box.value = "1";
     race_info.style = "display:normal";
 
+    let race_card = ``
+    race_card += `
+    <div class="card grey lighten-5">
+    <div class="card-content">
+    <span class="card-title">${data.race}</span>`
+
     Object.keys(data.stats).forEach(function (key) {
-      race_info.innerHTML += `
-      <p>${data.stats[key]}</p>
-      `;
+      race_card += `
+      <p>${data.stats[key]} </p>`;
     });
 
     Object.keys(data.attributes).forEach(function (attribute) {
-      race_info.innerHTML += `
+      race_card += `
       <div class = "attribute">
         <b>${data.attributes[attribute].name}</b>
         <p>${data.attributes[attribute].description}</p>
-      </div>
-      `
+      </div>`
     });
-    current_data = race_info.innerHTML;
-    race_info.appendChild(button);
+    
+    race_card += `
+    </div>`
+
+    race_info.innerHTML += race_card
+    current_data = race_card;
+    race_card += `
+    <div class="card-action">
+    <a href="#" onclick = "add_to_pad()" class = "light-blue-text accent-1">Add to Notepad</a>`
+    race_info.innerHTML = race_card
   }
 }
 
