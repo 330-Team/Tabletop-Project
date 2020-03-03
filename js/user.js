@@ -50,4 +50,6 @@ const old_account = () =>{
     localStorage.setItem("curr", email);
       window.location.href = "races.html";
   }
+
+  document.getElementById("username").innerHTML = email;
 }

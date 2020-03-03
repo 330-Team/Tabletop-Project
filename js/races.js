@@ -22,6 +22,10 @@ fetch('races/manifest.json')
     }
   })
 
+window.onload = function() {
+  document.getElementById("username").innerHTML += localStorage.getItem("curr");
+}
+
 const race_click = (ev_id) =>{
   let race_elements = document.getElementsByClassName("race");
   for(i = 0; i<race_elements.length; i++){
@@ -60,7 +64,7 @@ const race_click = (ev_id) =>{
         <p>${data.attributes[attribute].description}</p>
       </div>`
     });
-    
+
     race_card += `
     </div>`
 
