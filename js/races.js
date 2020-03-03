@@ -48,7 +48,7 @@ const race_click = (ev_id) =>{
 
     let race_card = ``
     race_card += `
-    <div class="card grey lighten-5">
+    <div class="card blue-grey lighten-5">
     <div class="card-image">
       <img src=${data.image_url} style="max-height:200px; width:auto;" class="right">
     </div>
