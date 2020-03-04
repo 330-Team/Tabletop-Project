@@ -22,6 +22,10 @@ fetch('spells/manifest.json')
     }
   })
 
+  window.onload = function() {
+    document.getElementById("username").innerHTML += localStorage.getItem("curr");
+  }
+
 const spell_click = (ev_id) =>{
   let spell_elements = document.getElementsByClassName("spell");
   for(i = 0; i<spell_elements.length; i++){

@@ -22,6 +22,10 @@ fetch('items/manifest.json')
     }
   })
 
+  window.onload = function() {
+    document.getElementById("username").innerHTML += localStorage.getItem("curr");
+  }
+
 const weapon_click = (ev_id) =>{
   let weapon_elements = document.getElementsByClassName("weapon");
   for(i = 0; i<weapon_elements.length; i++){
