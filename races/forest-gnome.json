@@ -1,8 +1,9 @@
 {
     "race": "Gnome (Forest)",
+    "image_url": "https://5e.tools/img/races/Gnome.png?v=1.99.1",
     "stats": {
         "ability_scores": [
-            "Int +2"
+            "Int +2",
             "Dex +1"
         ],
         "size": "Small",
@@ -21,6 +22,5 @@
             "name": "Languages",
             "description": "You can speak, read, and write Common and Gnomish. The Gnomish language, which uses the Dwarvish script, is renowned for its technical treatises and its catalogs of knowledge about the natural world."
         }
-    },
-    "image_url": "https://5e.tools/img/races/Gnome.png?v=1.99.1"
+    }
 }
