@@ -6,6 +6,11 @@
         "magic-missile",
         "message",
         "ray-of-frost",
-        "shield"
+        "shield",
+        "find-familiar",
+        "grease",
+        "light",
+        "prestidigitation"
     ]
+
 }

@@ -9,15 +9,22 @@ fetch('items/manifest.json')
       .then(response => response.json())
       .then(weapon_data => {
         document.querySelector("weapon-box").innerHTML += `
-        <button id = "${weapon_data.item}" class = "weapon" type = "button" onclick = "weapon_click('${weapon_data.item}')" value = "0">
+        <div class="row">
+        <div class="col l1"></div>
+        <button id = "${weapon_data.item}" class = "weapon btn-large light-blue accent-4 waves-effect col l10 center" type = "button" onclick = "weapon_click('${weapon_data.item}')" value = "0">
         ${weapon_data.item}
         </button>
+        </div>
         `
 
         weapons.push(weapon_data)
       })
     }
   })
+
+  window.onload = function() {
+    document.getElementById("username").innerHTML += localStorage.getItem("curr");
+  }
 
 const weapon_click = (ev_id) =>{
   let weapon_elements = document.getElementsByClassName("weapon");
@@ -39,27 +46,46 @@ const weapon_click = (ev_id) =>{
     weapon_box.value = "1";
     weapon_info.style = "display:normal";
 
-    weapon_info.innerHTML += `
+    let weapon_card = ``
+    weapon_card += `
+    <div class="card blue-grey lighten-5">
+    <div class="card-image">
+      <img src=${data.image_url} style="max-height:200px; width:auto;" class="right">
+    </div>
+    <div class="card-content" style="min-height:200px;">
+    <span class="card-title">${data.item}</span>`
+
+    weapon_card += `
     <p>${"Damage:  " + data.damage}</p>
     `;
 
     Object.keys(data.properties).forEach(function (p) {
-      weapon_info.innerHTML += `
-      <div class = "attribute">
+      weapon_card += `
+      <div weapon = "attribute">
         <b>${data.properties[p].name}</b>
         <p>${data.properties[p].value}</p>
       </div>
       `
     });
-    current_data = weapon_info.innerHTML;
-    weapon_info.appendChild(button);
+
+    weapon_card += `
+    </div>`
+
+    weapon_info.innerHTML += weapon_card;
+    current_data = weapon_card;
+    weapon_card += `
+    <div class="card-action">
+    <a href="#" onclick = "add_to_pad()" class = "light-blue-text accent-1">Add to Notepad</a>`
+    weapon_info.innerHTML = weapon_card
   }
 }
 
 const add_to_pad = () =>{
-  localStorage.setItem("weapon", current_data);
+  let user = localStorage.getItem("curr");
+
+  localStorage.setItem(user + "weapon", current_data);
   localStorage.setItem("track-weapon", "1");
-  if(localStorage.getItem("done") != "1" && localStorage.getItem("track-class") == "1" && localStorage.getItem("track-weapon") == "1" && localStorage.getItem("track-spell") == "1"){
+  if(localStorage.getItem("done") != "1" && localStorage.getItem("track-weapon") == "1" && localStorage.getItem("track-weapon") == "1" && localStorage.getItem("track-spell") == "1"){
     alert("Character creation achievement earned! \n You have created your very first character. See your notepad for more details.");
     localStorage.setItem("done", "1");
   }

@@ -13,7 +13,7 @@
             "shortswords"
         ],
         "Tools": [
-            "thieve's tools"
+            "Thieve's tools"
         ],
         "Saving-throws": [
             "Dexterity",
@@ -48,5 +48,6 @@
             "description": "During your rogue training you learned thieves' cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal conversation. Only another creature that knows thieves' cant understands such messages. It takes four times longer to convey such a message than it does to speak the same idea plainly.",
             "options": {}
         }
-    }
+    },
+    "image_url": "https://d20pfsrd.opengamingnetwork.com/wp-content/uploads/sites/12/2017/01/rogue__comm_by_yamaorce-d88oizc-320-2.png"
 }

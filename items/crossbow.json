@@ -22,5 +22,6 @@
             "name": "Two-Handed",
             "value": "This weapon requires two hands to use. This property is relevant only when you attack with the weapon, not when you simply hold it."
         }
-    ]
+    ],
+    "image_url": "https://i.stack.imgur.com/0EadT.jpg"
 }
