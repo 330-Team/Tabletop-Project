@@ -9,9 +9,12 @@ fetch('spells/manifest.json')
       .then(response => response.json())
       .then(spell_data => {
         document.querySelector("spell-box").innerHTML += `
-        <button id = "${spell_data.spell}" class = "spell" type = "button" onclick = "spell_click('${spell_data.spell}')" value = "0">
+        <div class="row">
+        <div class="col l1"></div>
+        <button id = "${spell_data.spell}" class = "spell btn-large light-blue accent-4 waves-effect col l10 center" type = "button" onclick = "spell_click('${spell_data.spell}')" value = "0">
         ${spell_data.spell}
         </button>
+        </div>
         `
 
         spells.push(spell_data)
@@ -39,12 +42,21 @@ const spell_click = (ev_id) =>{
     spell_box.value = "1";
     spell_info.style = "display:normal";
 
-    spell_info.innerHTML += `
+    let spell_card = ``
+    spell_card += `
+    <div class="card blue-grey lighten-5">
+    <div class="card-image">
+      <img src=${data.image_url} style="max-height:200px; width:auto;" class="right">
+    </div>
+    <div class="card-content" style="min-height:200px;">
+    <span class="card-title">${data.spell}</span>`
+
+    spell_card += `
     <p>${"Level: " + data.level}</p>
     `;
 
     Object.keys(data.properties).forEach(function (p) {
-      spell_info.innerHTML += `
+      spell_card += `
       <div class = "property">
         <b>${data.properties[p].name}</b>
         <p>${data.properties[p].value}</p>
@@ -52,23 +64,32 @@ const spell_click = (ev_id) =>{
       `
     });
 
-    spell_info.innerHTML += `
+    spell_card += `
     <p>${"Description: " + data.description}</p>
     `;
 
-    current_data = spell_info.innerHTML;
-    spell_info.appendChild(button);
+
+
+    spell_card += `
+    </div>`
+
+    spell_info.innerHTML += spell_card;
+    current_data = spell_card;
+    spell_card += `
+    <div class="card-action">
+    <a href="#" onclick = "add_to_pad()" class = "light-blue-text accent-1">Add to Notepad</a>`
+    spell_info.innerHTML = spell_card
   }
 }
 
 const add_to_pad = () =>{
-  let user = localStorage.getItem("curr");
+  let user = localStorage.getspell("curr");
 
-  localStorage.setItem(user + "spell", current_data);
-  localStorage.setItem("track-spell", "1");
-  if(localStorage.getItem("done") != "1" && localStorage.getItem("track-class") == "1" && localStorage.getItem("track-weapon") == "1" && localStorage.getItem("track-race") == "1"){
+  localStorage.setspell(user + "spell", current_data);
+  localStorage.setspell("track-spell", "1");
+  if(localStorage.getspell("done") != "1" && localStorage.getspell("track-class") == "1" && localStorage.getspell("track-spell") == "1" && localStorage.getspell("track-race") == "1"){
     alert("Character creation achievement earned! \n You have created your very first character. See your notepad for more details.");
-    localStorage.setItem("done", "1");
+    localStorage.setspell("done", "1");
   }
   alert("Added to notepad");
 }

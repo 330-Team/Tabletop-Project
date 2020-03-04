@@ -26,7 +26,10 @@
       "heavy crossbow",
       "quarterstaff"
     ],
-    "spells": {"Catapult", "Burning Hands", "Blink"},
+    "spells": {
+        "cantrip": "2",
+        "1st-level": "2"
+    },
     "features": {
         "spellcasting": {
             "name": "Spellcasting",

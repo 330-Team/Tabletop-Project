@@ -23,6 +23,10 @@ const new_account = () =>{
     alert("Passwords do not match.");
   }
 
+  else if(email.length > 10){
+    alert("Username is more than 10 characters.");
+  }
+
   else{
     localStorage.setItem(email, password);
     localStorage.setItem("curr", email);
