@@ -55,6 +55,8 @@ const race_click = (ev_id) =>{
     <div class="card-content" style="min-height:200px;">
     <span class="card-title">${data.race}</span>`
 
+    race_card += "Statistics".bold()
+
     Object.keys(data.stats).forEach(function (key) {
       race_card += `
       <p>${data.stats[key]} </p>`;
@@ -71,7 +73,7 @@ const race_click = (ev_id) =>{
     race_card += `
     </div>`
 
-    race_info.innerHTML += race_card
+    race_info.innerHTML += race_card;
     current_data = race_card;
     race_card += `
     <div class="card-action">

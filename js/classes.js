@@ -48,27 +48,64 @@ const class_click = (ev_id) =>{
 
     let class_card = ``
     class_card += `
-    <div class="card grey lighten-5">
-    <div class="card-content">
+    <div class="card blue-grey lighten-5">
+    <div class="card-image">
+      <img src=${data.image_url} style="max-height:200px; width:auto;" class="right">
+    </div>
+    <div class="card-content" style="min-height:200px;">
     <span class="card-title">${data.class}</span>`
 
-    Object.keys(data.stats).forEach(function (key) {
-      class_card += `
-      <p>${data.stats[key]} </p>`;
-    });
+    class_card += `
+     <p>${"HP:  " + data.hp}</p>
+     `;
 
-    Object.keys(data.attributes).forEach(function (attribute) {
-      class_card += `
-      <div class = "attribute">
-        <b>${data.attributes[attribute].name}</b>
-        <p>${data.attributes[attribute].description}</p>
-      </div>`
-    });
+     Object.keys(data.proficiencies).forEach(function (key) {
+       class_card += `
+       <p>${key.charAt(0).toUpperCase() + key.slice(1) + ":  " + data.proficiencies[key]}</p>
+       `;
+     });
+
+     class_card +=  'Equip options:  ';
+
+     for(i in data['equip-options']){
+       if(i == data['equip-options'].length-1){
+         class_card +=  data['equip-options'][i];
+       }
+       else{
+         class_card +=  data['equip-options'][i] + ", ";
+       }
+     }
+
+     class_card += `
+     <p>${"Spells".bold().fontsize(5)}</p>
+     `;
+
+     Object.keys(data.spells).forEach(function (s) {
+       class_card += `
+       <div class = "feature">
+         <b>${s}</b>
+         <p>${data.spells[s]}</p>
+       </div>
+       `
+     });
+
+     class_card += `
+     <p>${"Features".bold().fontsize(5)}</p>
+     `;
+
+     Object.keys(data.features).forEach(function (feature) {
+       class_card += `
+       <div class = "feature">
+         <b>${data.features[feature].name}</b>
+         <p>${data.features[feature].description}</p>
+       </div>
+       `
+     });
 
     class_card += `
     </div>`
 
-    class_info.innerHTML += class_card
+    class_info.innerHTML += class_card;
     current_data = class_card;
     class_card += `
     <div class="card-action">
