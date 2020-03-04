@@ -83,13 +83,13 @@ const spell_click = (ev_id) =>{
 }
 
 const add_to_pad = () =>{
-  let user = localStorage.getspell("curr");
+  let user = localStorage.getItem("curr");
 
-  localStorage.setspell(user + "spell", current_data);
-  localStorage.setspell("track-spell", "1");
-  if(localStorage.getspell("done") != "1" && localStorage.getspell("track-class") == "1" && localStorage.getspell("track-spell") == "1" && localStorage.getspell("track-race") == "1"){
+  localStorage.setItem(user + "spell", current_data);
+  localStorage.setItem("track-spell", "1");
+  if(localStorage.getItem("done") != "1" && localStorage.getItem("track-class") == "1" && localStorage.getItem("track-spell") == "1" && localStorage.getItem("track-race") == "1"){
     alert("Character creation achievement earned! \n You have created your very first character. See your notepad for more details.");
-    localStorage.setspell("done", "1");
+    localStorage.setItem("done", "1");
   }
   alert("Added to notepad");
 }
