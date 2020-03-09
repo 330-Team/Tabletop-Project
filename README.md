@@ -37,7 +37,10 @@ The three components we chose to implement were interactive data selection, thro
 In the end, we managed to create an application that is capable of displaying information found in Dungeons & Dragons Fifth Edition and copy it to a single notepad page for the user’s convenience. The app also allows for the creation of multiple user accounts on one computer.
 If we were to continue this project, our team would focus on encoding more information into the application, including pages for other features of the full Dungeons & Dragons game such as feats, items, and a bestiary. We would also like to expand the program to provide support for other tabletop games such as Call of Cthulhu.
 
-# Links (add instructions)
+# Links
 Repository: https://github.com/330-Team/Tabletop-Project
 
 Working prototype: https://330-team.github.io/Tabletop-Project/signup.html
+
+#### Instructions
+Tabletop Game Assistant is compatible with any browser and OS, but for best results, please use Google Chrome on a Windows or Mac device.
