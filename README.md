@@ -25,4 +25,5 @@ If we were to continue this project, our team would focus on encoding more infor
 
 # Links (add instructions)
 Repository: https://github.com/330-Team/Tabletop-Project
+
 Working prototype: https://330-team.github.io/Tabletop-Project/signup.html
