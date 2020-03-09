@@ -4,7 +4,7 @@
     "stats": {
         "ability_scores": [
             "Int +2",
-            "Dex +1"
+            " Dex +1"
         ],
         "size": "Small",
         "speed": "25 ft."

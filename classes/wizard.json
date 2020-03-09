@@ -5,30 +5,30 @@
         "Armor": [],
         "Weapons": [
             "daggers",
-            "darts",
-            "slings",
-            "quarterstaffs",
-            "light crossbows"
+            " darts",
+            " slings",
+            " quarterstaffs",
+            " light crossbows"
         ],
         "Tools": [],
         "Saving-throws": [
             "Intelligence",
-            "Wisdom"
+            " Wisdom"
         ],
         "Skills": [
             "Arcana",
-            "Insight"
+            " Insight"
         ]
     },
     "equip-options": [
         "Quarterstaff"
     ],
     "spells": {
-        "cantrip": "3",
+        "Cantrip": "3",
         "1st-level": "2"
     },
     "features": {
-        "cantrips": {
+        "Cantrips": {
             "name": "cantrips",
             "description": "You know three cantrips of your choice from the spell list.",
             "options": {}

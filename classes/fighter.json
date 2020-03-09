@@ -4,22 +4,22 @@
     "proficiencies": {
         "Armor": [
             "light armor",
-            "medium armor",
-            "heavy armor",
-            "shields"
+            " medium armor",
+            " heavy armor",
+            " shields"
         ],
         "Weapons": [
             "simple weapons",
-            "martial weapons"
+            " martial weapons"
         ],
         "Tools": [],
         "Saving-throws": [
             "Strength",
-            "Constitution"
+            " Constitution"
         ],
         "Skills": [
             "Athletics",
-            "Intimidation"
+            " Intimidation"
         ]
     },
     "equip-options": [
@@ -31,7 +31,7 @@
     "features": {
         "fighting-style": {
             "name": "Fighting Style",
-            "description": "You adopt a particular style of fighting as your specialty. Choose one of the following options.",
+            "description": "You adopt a particular style of fighting as your specialty.",
             "options": {
                 "archery": {
                     "name": "Archery",
@@ -45,7 +45,7 @@
         },
         "second-wind": {
             "name": "Second Wind",
-            "description": "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again.",
+            "description": "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 plus your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again.",
             "options": {}
         }
     },

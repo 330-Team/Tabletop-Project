@@ -4,33 +4,33 @@
     "proficiencies": {
         "Armor": [
           "light armor",
-          "medium armor",
-          "shields"
+          " medium armor",
+          " shields"
         ],
         "Weapons": [
             "simple weapons",
-            "martial weapons"
+            " martial weapons"
         ],
         "Tools": [],
         "Saving-throws": [
             "Strength",
-            "Dexterity"
+            " Dexterity"
         ],
         "Skills": [
             "Animal Handling",
-            "Athletics"
+            " Athletics"
         ]
     },
     "equip-options": [
-        "longsword",
-        "heavy crossbow",
-        "quarterstaff"
+        "Longsword",
+        "Heavy crossbow",
+        "Quarterstaff"
     ],
     "spells": {},
     "features": {
         "fighting-style": {
             "name": "Fighting Style",
-            "description": "At 2nd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.",
+            "description": "At 2nd level, you adopt a particular style of fighting as your specialty. You can't take a Fighting Style option more than once, even if you later get to choose again.",
             "options": {
                 "archery": {
                     "name": "Archery",

@@ -3,7 +3,7 @@
     "stats": {
         "ability_scores": [
             "Con +2",
-            "Wis +1"
+            " Wis +1"
         ],
         "size": "Medium",
         "speed": "25 ft."

@@ -60,9 +60,16 @@ const class_click = (ev_id) =>{
      `;
 
      Object.keys(data.proficiencies).forEach(function (key) {
-       class_card += `
-       <p>${key.charAt(0).toUpperCase() + key.slice(1) + ":  " + data.proficiencies[key]}</p>
-       `;
+       if(data.proficiencies[key].length != 0){
+         class_card += `
+         <p>${key.charAt(0).toUpperCase() + key.slice(1) + ":  " + data.proficiencies[key]}</p>
+         `;
+       }
+       else{
+         class_card += `
+         <p>${key.charAt(0).toUpperCase() + key.slice(1) + ":  " + "none"}</p>
+         `;
+       }
      });
 
      class_card +=  'Equip options:  ';
@@ -80,6 +87,15 @@ const class_click = (ev_id) =>{
      <p>${"Spells".bold().fontsize(5)}</p>
      `;
 
+
+
+     if(isEmpty(data.spells)){
+       class_card += `
+       <p>${"none"}</p>
+       `
+     }
+
+    else{
      Object.keys(data.spells).forEach(function (s) {
        class_card += `
        <div class = "feature">
@@ -88,6 +104,7 @@ const class_click = (ev_id) =>{
        </div>
        `
      });
+   }
 
      class_card += `
      <p>${"Features".bold().fontsize(5)}</p>
@@ -117,10 +134,10 @@ const class_click = (ev_id) =>{
 const add_to_pad = () =>{
   let user = localStorage.getItem("curr");
 
-  localStorage.setItem("track-class", "1");
-  if(localStorage.getItem("done") != "1" && localStorage.getItem("track-class") == "1" && localStorage.getItem("track-weapon") == "1" && localStorage.getItem("track-spell") == "1"){
-    alert("Character creation achievement earned! \n You have created your very first character. See your notepad for more details.");
-    localStorage.setItem("done", "1");
+  localStorage.setItem(user + "track-class", "1");
+  if(localStorage.getItem(user + "done") != "1" && localStorage.getItem(user + "track-class") == "1" && localStorage.getItem(user + "track-weapon") == "1" && localStorage.getItem(user + "track-spell") == "1"){
+    alert("Character creation achievement earned! \nYou have created your very first character. See your profile page for more details.");
+    localStorage.setItem(user + "done", "1");
   }
   localStorage.setItem(user + "class", current_data);
   alert("Added to notepad");
@@ -128,4 +145,12 @@ const add_to_pad = () =>{
 
 const notepad = () =>{
   window.location.href = "http://localhost:8000/notepad.html";
+}
+
+const isEmpty = (obj) =>{
+  for(var s in obj) {
+      if(obj.hasOwnProperty(s))
+          return false;
+  }
+  return true;
 }

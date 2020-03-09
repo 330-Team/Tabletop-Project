@@ -21,3 +21,7 @@ if (localStorage.getItem(user + "weapon")) {
 if (localStorage.getItem(user + "spell")) {
     document.getElementById("spellCheck").className = "far fa-check-square"
 }
+
+if(localStorage.getItem(user + "race") && localStorage.getItem(user + "class") && localStorage.getItem(user + "weapon") && localStorage.getItem(user + "spell")){
+  document.getElementById("achievement").innerHTML = "You have created a character!";
+}
