@@ -14,8 +14,8 @@ Our concept was well received by testers. Several of our testers, who had been i
 
 A problem we encountered with prototyping was encoding the sheer amount of information that would be required to create a prototype that included all of the numbers and interactions within DnD. After paper prototyping, we decided that restricting the amount of information available to the user was the best option.
 
-# High-Fidelity Prototyping (add screenshots)
-The first task we chose to support was the ability to navigate pages for races, weapons, and spells and be able to view the information available to them. Below you can see two pages players can navigate to, along with an example of one of the options available at each page. Each option provides the player with statistics, abilities, and an appropriate image.
+# High-Fidelity Prototyping
+The first task we chose to support was the ability to navigate pages for races, classes, weapons, and spells and be able to view their options. Below you can see two pages players can navigate to, along with an example of one of the options available at each page. Each option provides the player with statistics, abilities, and an appropriate image.
 
 ![](races.png)
 
