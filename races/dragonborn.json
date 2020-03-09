@@ -2,8 +2,8 @@
     "race": "Dragonborn",
     "stats": {
         "ability_scores": [
-            "Str: +2",
-            "Cha: +1"
+            "Str +2",
+            " Cha +1"
         ],
         "size": "Medium",
         "speed": "30 ft."

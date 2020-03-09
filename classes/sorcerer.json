@@ -6,28 +6,28 @@
         ],
         "Weapons": [
             "daggers",
-            "darts",
-            "slings",
-            "quarterstaffs",
-            "light crossbows"
+            " darts",
+            " slings",
+            " quarterstaffs",
+            " light crossbows"
         ],
         "Tools": [],
         "Saving-throws": [
             "Charisma",
-            "Constitution"
+            " Constitution"
         ],
         "Skills": [
             "Arcana",
-            "Intimidation"
+            " Intimidation"
         ]
     },
     "equip-options": [
-      "longsword",
-      "heavy crossbow",
-      "quarterstaff"
+      "Longsword",
+      "Heavy crossbow",
+      "Quarterstaff"
     ],
     "spells": {
-        "cantrip": "2",
+        "Cantrip": "2",
         "1st-level": "2"
     },
     "features": {

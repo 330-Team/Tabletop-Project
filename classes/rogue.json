@@ -7,23 +7,23 @@
         ],
         "Weapons": [
             "simple weapons",
-            "hand crossbows",
-            "longswords",
-            "rapiers",
-            "shortswords"
+            " hand crossbows",
+            " longswords",
+            " rapiers",
+            " shortswords"
         ],
         "Tools": [
-            "Thieve's tools"
+            "thieve's tools"
         ],
         "Saving-throws": [
             "Dexterity",
-            "Intelligence"
+            " Intelligence"
         ],
         "Skills": [
             "Acrobatics",
-            "Deception",
-            "Perception",
-            "Stealth"
+            " Deception",
+            " Perception",
+            " Stealth"
         ]
     },
     "equip-options": [
@@ -35,7 +35,7 @@
     "features": {
         "expertise": {
             "name": "Expertise",
-            "description": "Choose two of your skills. You gain a +2 bonus for any ability check you make that uses either of the chosen skills.",
+            "description": "Choose two of your skills. You gain a +2 bonus for any ability you make that uses either of the chosen skills.",
             "options": {}
         },
         "sneak-attack": {

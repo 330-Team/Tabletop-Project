@@ -5,18 +5,18 @@
         "Armor": [],
         "Weapons": [
             "simple weapons",
-            "shortswords"
+            " shortswords"
         ],
         "Tools": [
             "artisan's tools"
         ],
         "Saving-throws": [
             "Strength",
-            "Dexterity"
+            " Dexterity"
         ],
         "Skills": [
             "Acrobatics",
-            "Religion"
+            " Religion"
         ]
     },
     "equip-options": [
@@ -26,7 +26,7 @@
     "features": {
         "unarmored-defense": {
             "name": "Unarmored Defense",
-            "description": "Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier.",
+            "description": "Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 plus your Dexterity modifier plus your Wisdom modifier.",
             "options": {}
         },
         "martial-arts": {

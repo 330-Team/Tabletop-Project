@@ -4,21 +4,21 @@
     "proficiencies": {
         "Armor": [
             "light armor",
-            "medium armor",
-            "heavy armor"
+            " medium armor",
+            " heavy armor"
         ],
         "Weapons": [
             "simple weapons",
-            "martial weapons"
+            " martial weapons"
         ],
         "Tools": [],
         "Saving-throws": [
             "Wisdom",
-            "Charisma"
+            " Charisma"
         ],
         "Skills": [
             "Athletics",
-            "Intimidation"
+            " Intimidation"
         ]
     },
     "equip-options": [
