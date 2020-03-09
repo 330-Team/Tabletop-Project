@@ -1,5 +1,6 @@
 <html>
   <head>
+        <title>Tabletop Game Assistant</title>
         <!-- <link rel="stylesheet" href="layout.css">
         <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Open-Sans"> -->
@@ -13,22 +14,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body class="grey darken-3">
+    <div class = "row cyan darken-4 z-depth-0 valign-wrapper">
+      <h3> Tabletop Game Assistant </h3>
+      <div class="chip col l1">
+        <a id = "username" href = "profile.html"></a>
+        <i class="close material-icons" onclick = "signOut()">close</i>
+      </div>
+    </div>
     <div class = "row cyan darken-4 z-depth-1 valign-wrapper">
       <div class = "col l4 valign blue-grey-text text-lighten-4">
         <h3>Spells</h3>
       </div>
       <div class="col l3"></div>
-      <h5 class="col l5 valign">
+      <h5 class="col l4 valign">
         <a href="races.html" class="breadcrumb light-blue-text text-accent-2">Races</a>
         <a href="classes.html" class="breadcrumb light-blue-text text-accent-2">Classes</a>
         <a href="weapons.html" class="breadcrumb light-blue-text text-accent-2">Weapons</a>
         <a href="spells.html" class="breadcrumb light-blue-text text-accent-2">Spells</a>
         <a href="notepad.html" class="breadcrumb light-blue-text text-accent-2">Notepad</a>
       </h5>
-      <div class=" chip col l1">
-        <a id = "username" href = "profile.html"></a>
-        <i class="close material-icons" onclick = "signOut()">close</i>
-      </div>
     </div>
     <div class = "row">
       <spell-box class = "col l6"></spell-box c>
